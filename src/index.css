@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.primary-font {
+  font-family: "Jost", sans-serif;
+}
+
+li {
+  cursor: pointer;
+}
+
+html {
+  scroll-behavior: smooth;
+}
