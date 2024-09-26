@@ -1,3 +1,5 @@
+import mainPageImage from '../assets/mainPageFonImage.png'
+
 import telegram from '../assets/telegram.png'
 import instagram from '../assets/instagram.png'
 import linkedin from '../assets/linkedin.png'
@@ -22,7 +24,7 @@ export default function Footer() {
         setModalIsOpen(false);
     };
     return <>
-        <div className="lg:hidden bg-black py-28 px-4 sm:px-28" id="footer">
+        <div style={{ backgroundImage: `url(${mainPageImage})`, backgroundSize: 'cover' }} className="lg:hidden bg-black py-28 px-4 sm:px-28" id="footer">
             <div className='flex justify-between mb-12 space-y-4 text-white w-full'>
                 <span style={{
                     fontSize: '25px',
@@ -38,7 +40,9 @@ export default function Footer() {
                 </div>
             </div>
             <div className="max-w-6xl space-x-12 text-white items-start flex justify-between">
+
                 <div className='flex flex-col space-y-6'>
+
                     <span style={{
                         fontSize: '25px',
                         fontWeight: '800',
@@ -90,6 +94,24 @@ export default function Footer() {
                     </ul>
                 </div>
             </div>
+            <div className='mx-auto mt-[40px] max-w-[470px] bg-white flex flex-col items-center px-[25px] py-[40px] space-y-[32px]'>
+                    <span className='text-[#025699]' style={{
+                        fontFamily: 'Jost',
+                        fontSize: '40px',
+                        fontWeight: '700',
+                        lineHeight: '57.8px',
+                        textAlign: 'left',
+                    }}>
+                        Оставьте заявку
+                    </span>
+                    <input type="text" placeholder='Имя' className='w-full rounded-[10px] shadow-2xl bg-[#5088B5] text-white text-[24px] placeholder-white p-[17px]' />
+                    <input type="text" placeholder='Почта' className='bg-[#5088B5] w-full rounded-[10px] shadow-2xl text-white text-[24px] placeholder-white p-[17px]' />
+                    <input type="text" placeholder='+7 (000)000 00 00' className='bg-[#5088B5] w-full rounded-[10px] shadow-2xl text-white text-[24px] placeholder-white p-[17px]' />
+                    <div className='w-full bg-[#025699] text-[35px] text-white px-[48px] text-center py-[17px]'>Отправить заявку</div>
+                    <div className='text-black'>
+                        Оставляя заявку Вы даете согласие на информационную рассылку ваших данных
+                    </div>
+                </div>
             <div style={{
                 fontSize: '25px',
                 fontWeight: '500',
@@ -98,20 +120,24 @@ export default function Footer() {
                 © 2024 . Политика конфиденциальности
             </div>
         </div>
-        <div className="hidden lg:block bg-black py-28 px-28">
+        <div style={{ backgroundImage: `url(${mainPageImage})`, backgroundSize: 'cover' }} className="hidden lg:block bg-black py-28 px-28">
             <div className="max-w-6xl text-white flex justify-between">
-                <div className='flex flex-col space-y-4'>
-                    <span style={{
-                        fontSize: '25px',
-                        fontWeight: '600',
-                        lineHeight: '36.13px'
+                <div className='max-w-[470px] bg-white flex flex-col items-center px-[25px] py-[40px] space-y-[32px]'>
+                    <span className='text-[#025699]' style={{
+                        fontFamily: 'Jost',
+                        fontSize: '40px',
+                        fontWeight: '700',
+                        lineHeight: '57.8px',
+                        textAlign: 'left',
                     }}>
-                        InnovateHub
+                        Оставьте заявку
                     </span>
-                    <div className='flex space-x-4'>
-                        <img src={telegram} alt="" />
-                        <img src={instagram} alt="" />
-                        <img src={linkedin} alt="" />
+                    <input type="text" placeholder='Имя' className='w-full rounded-[10px] shadow-2xl bg-[#5088B5] text-white text-[24px] placeholder-white p-[17px]' />
+                    <input type="text" placeholder='Почта' className='bg-[#5088B5] w-full rounded-[10px] shadow-2xl text-white text-[24px] placeholder-white p-[17px]' />
+                    <input type="text" placeholder='+7 (000)000 00 00' className='bg-[#5088B5] w-full rounded-[10px] shadow-2xl text-white text-[24px] placeholder-white p-[17px]' />
+                    <div className='w-full bg-[#025699] text-[35px] text-white px-[48px] text-center py-[17px]'>Отправить заявку</div>
+                    <div className='text-black'>
+                        Оставляя заявку Вы даете согласие на информационную рассылку ваших данных
                     </div>
                 </div>
                 <div className='flex flex-col space-y-6'>
@@ -164,6 +190,20 @@ export default function Footer() {
                         </li>
 
                     </ul>
+                    <div className='flex flex-col space-y-4'>
+                        <span style={{
+                            fontSize: '25px',
+                            fontWeight: '600',
+                            lineHeight: '36.13px'
+                        }}>
+                            InnovateHub
+                        </span>
+                        <div className='flex space-x-4'>
+                            <img src={telegram} alt="" />
+                            <img src={instagram} alt="" />
+                            <img src={linkedin} alt="" />
+                        </div>
+                    </div>
                 </div>
             </div>
             <div style={{
@@ -173,7 +213,7 @@ export default function Footer() {
             }} className='text-center text-white pt-28'>
                 <span onClick={openModal}>© 2024 . Политика конфиденциальности</span>
             </div>
-        </div>
+        </div >
 
         <Modal style={{
 
