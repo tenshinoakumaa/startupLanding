@@ -1,5 +1,5 @@
 import mainPageImage from '../assets/mainPageFonImage.png'
-
+import x from '../assets/X.svg'
 import telegram from '../assets/telegram.png'
 import instagram from '../assets/instagram.png'
 import linkedin from '../assets/linkedin.png'
@@ -32,6 +32,18 @@ export default function Footer() {
 
     const closeModal2 = () => {
         setModalIsOpen2(false);
+    };
+
+
+    const [modalIsOpen3, setModalIsOpen3] = useState(false);
+
+    const openModal3 = () => {
+        closeModal2()
+        setModalIsOpen3(true);
+    };
+
+    const closeModal3 = () => {
+        setModalIsOpen3(false);
     };
 
 
@@ -227,8 +239,22 @@ export default function Footer() {
             </div>
         </div >
 
+        <Modal className='mx-auto flex items-center justify-center h-full' isOpen={modalIsOpen3} onRequestClose={closeModal3}>
+            <ModalContent className='bg-[#025699] relative !px-[60px] !py-[20px] text-center text-white z-[10000]' >
+                <img src={x} alt="" className='absolute right-[10px] top-[10px]' />
+                <div className='text-[32px] font-bold'>
+                    Заказ принят
+                </div>
+                <div className='w-[285px]'>
+                    Мы свяжемся с вами для уточнения
+                    деталей и согласования всех шагов.
+                </div>
+            </ModalContent>
+        </Modal>
+
+
         <Modal className='mx-auto flex items-center justify-center h-full' isOpen={modalIsOpen2} onRequestClose={closeModal2}>
-            <ModalContent className='max-w-[1071px]  bg-white flex flex-col items-center h-[800px] lg:h-[450px]' >
+            <ModalContent className='max-w-[1071px]  bg-white flex flex-col z-[1000] items-center h-[800px] lg:h-[450px]' >
                 <div className='flex  lg:items-center lg:space-x-[40px] flex-col items-center space-y-[20px] lg:flex-row lg:justify-between w-full'>
                     <div className='px-[35px] pt-[12px] pb-[64px] bg-[#025699] rounded-[15px] space-y-[89px]'>
                         <div className='text-end text-white italic font-bold'>
@@ -259,7 +285,7 @@ export default function Footer() {
                             }
                             type='text' placeholder='CVV' className='py-[17px] px-[20px] text-[#989595] text-[24px] max-w-[420px]' />
 
-                        <div className='bg-[#025699] py-[17px] w-[full] text-center text-white text-[24px]'>
+                        <div onClick={openModal3} className='bg-[#025699] py-[17px] w-[full] text-center text-white text-[24px]'>
                             Оформить заказ
                         </div>
                     </div>
